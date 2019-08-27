@@ -23,7 +23,7 @@ module.exports = {
 	},
 	"plugins": [
 		"react",
-        "import",
+		"import",
 	],
 	"settings": {
 		"import/resolver": {
