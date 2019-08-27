@@ -1,33 +1,6 @@
 Latitude JS Style Guide
 =======================
 
-<!--### Avoid Long/Complicated Ternaries-->
-<!--- Keep it simple 😉-->
-<!--- Should be *at most* 100 characters long-->
-<!--- **NEVER** nest ternaries within ternaries-->
-
-<!--**When to use `if` instead**-->
-<!-->For example, if a ternary usage looks like:-->
-<!-->```javascript-->
-<!-->return (array.length && thingIsTrue) ? (array.length > 3 ? 'enough data' : 'not enough data') : 'no data'-->
-<!-->```-->
-<!-->it should be re-written to something like:-->
-<!-->```javascript-->
-<!-->if(array.length && thingIsTrue) {-->
-<!-->    if(array.length > 3) {-->
-<!-->        return 'enough data'-->
-<!-->    }-->
-<!-->    return 'not enough data'-->
-<!-->}-->
-<!-->return 'no data'-->
-<!-->```-->
-
-<!--**An example of a reasonable usage**-->
-<!-->```javascript-->
-<!-->return thingIsTrue ? 'so true' : 'not so true'-->
-<!-->```-->
-
-
 ## Promises
 
   - Always chain standard promises
