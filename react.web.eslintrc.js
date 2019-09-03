@@ -46,48 +46,56 @@ module.exports = {
 		"es6": true
 	},
 	"rules": {
-		"no-console": "off",
-		"no-useless-escape": "off",
-		"no-empty-pattern": "off",
 
+        /* Keep Off? */
+        "no-console": "off",
+        "no-useless-escape": "off",
+        "no-empty-pattern": "off",
+
+
+		/* React */
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "react/no-array-index-key": "warn",
+
+
+		/* Import/Export */
 		"import/first": "error",
-
+        "no-duplicate-imports": "error",
 
 
 		/* Spacing */
-
         "arrow-spacing": "error",
         "space-before-blocks": "error",
         "block-spacing": "error",
         "func-call-spacing": ["error", "never"],
         "spaced-comment": ["error", "always"],
-
         "key-spacing": ["error", {
         	"afterColon": true,
-        	"mode": "strict",
+        	"mode": "strict"
 		}],
         "keyword-spacing": ["error", {
-        	"after": true,
+        	"after": true
 		}],
         "array-bracket-spacing": ["error", "always", {
-        	"objectsInArrays": false,
+        	"objectsInArrays": false
 		}],
         "object-curly-spacing": ["error", "always"],
         "template-curly-spacing": ["error", "never"],
         "comma-spacing": ["error", {
         	"before": false,
-			"after": true,
+			"after": true
 		}],
         "space-in-parens": ["error", "never"],
         "space-infix-ops": "error",
         "no-whitespace-before-property": "error",
         "newline-per-chained-call": ["error", {
-        	"ignoreChainWithDepth": 2,
+        	"ignoreChainWithDepth": 2
 		}],
         "padded-blocks": ["error", "never"],
         "no-multiple-empty-lines": "error",
         "indent": ["warn", 2, {
-        	"SwitchCase": 1,
+        	"SwitchCase": 1
         }],
         "max-len": ["error", {
         	"code": 80,
@@ -100,6 +108,7 @@ module.exports = {
 
 
 		/* Commas */
+        "semi": ["error", "always"],
         "comma-style": ["error", "last"],
         "comma-dangle": [ "warn", {
             "arrays": "always-multiline",
@@ -108,11 +117,6 @@ module.exports = {
             "exports": "never",
             "functions": "ignore"
         }],
-        "semi": ["error", "always"],
-
-        "no-else-return": "error",
-        "no-nested-ternary": "error",
-        "no-case-declarations": "error",
 
 
 		/* Variables */
@@ -120,33 +124,38 @@ module.exports = {
         "prefer-const": "error",
 		"one-var": ["error", "never"],
         "no-unused-vars": ["warn", { "ignoreModules": true }],
+        "no-case-declarations": "error",
+        "no-new-wrappers": "error",
+
 
 
 		/* Naming */
         "id-length": ["error", {
-            "min": 4,
-        	"exceptions": [ "x", "o" ],
+            "min": 3,
+        	"exceptions": [ "x", "i", "o", "n" ]
 		}],
         "camelcase": ["error", {
         	"properties": "never",
             "allow": ["^UNSAFE_"],
-            "ignoreDestructuring": true,
+            "ignoreDestructuring": true
         }],
         "no-underscore-dangle": ["error", {
-            "allowAfterThis": true,
+            "allowAfterThis": true
         }],
 
 
-        "function-paren-newline": ["error", { "minItems": 3 }],
-        "no-new-wrappers": "error",
-        "eqeqeq": ["error", "smart"],
-        "object-shorthand": "error",
-        "prefer-spread": "error",
-        "prefer-template": "error",
-        "no-duplicate-imports": "error",
+		/* Function Specific */
+        "no-param-reassign": "error",
         "prefer-arrow-callback": "error",
         "implicit-arrow-linebreak": ["error", "beside"],
-        "no-param-reassign": "error",
+        "function-paren-newline": ["error", {
+        	"minItems": 3
+        }],
+
+
+		/* Objects/Arrays */
+        "object-shorthand": "error",
+        "prefer-spread": "error",
         "prefer-destructuring": ["error", {
             "array": true,
             "object": true
@@ -155,15 +164,34 @@ module.exports = {
         }],
 
 
+		/* Strings */
+        "prefer-template": "error",
+        "quotes": ["warn", "single", {
+            "avoidEscape": true,
+            "allowTemplateLiterals": true
+        }],
 
-		"quotes": ["warn", "single", {
-			"avoidEscape": true,
-			"allowTemplateLiterals": true
-		}],
+
+		/* Conditional Logic */
+        "no-else-return": "error",
+        "eqeqeq": ["error", "smart"],
+        "no-nested-ternary": "error",
 
 
-		"react/jsx-uses-react": "error",
-		"react/jsx-uses-vars": "error",
-		"react/no-array-index-key": "warn",
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		"useless-filler-thingy": "off"
 	}
 };
