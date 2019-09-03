@@ -55,6 +55,7 @@ module.exports = {
 
 
 		/* Spacing */
+
         "arrow-spacing": "error",
         "space-before-blocks": "error",
         "block-spacing": "error",
@@ -136,6 +137,7 @@ module.exports = {
         }],
 
 
+        "function-paren-newline": ["error", { "minItems": 3 }],
         "no-new-wrappers": "error",
         "eqeqeq": ["error", "smart"],
         "object-shorthand": "error",
