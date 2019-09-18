@@ -3,7 +3,7 @@ module.exports = {
 	"extends": [
 		"eslint:recommended",
         "plugin:import/errors",
-        "plugin:import/warnings",
+        "plugin:import/warnings"
 	],
 	"parserOptions": {
 		"ecmaVersion": 8,
@@ -11,7 +11,7 @@ module.exports = {
 		"ecmaFeatures": {
 			"jsx": true,
             "arrowFunctions": true,
-			"experimentalObjectRestSpread": true,
+			"experimentalObjectRestSpread": true
 		}
 	},
 	"globals": {
@@ -19,11 +19,11 @@ module.exports = {
 		"Promise": true,
 		"PKG_VERSION": true,
 		"APP_VERSION": true,
-		"BUGSNAG_KEY": true,
+		"BUGSNAG_KEY": true
 	},
 	"plugins": [
 		"react",
-		"import",
+		"import"
 	],
 	"settings": {
 		"import/resolver": {

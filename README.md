@@ -1,9 +1,39 @@
 Latitude JS Style Guide
 =======================
 
+## Table of Contents
+
+  1. [Promises](#promises)
+  1. [Types](#types)
+  1. [References](#references)
+  1. [Objects](#objects)
+  1. [Arrays](#arrays)
+  1. [Destructuring](#destructuring)
+  1. [Strings](#strings)
+  1. [Functions](#functions)
+  1. [Arrow Functions](#arrow-functions)
+  1. [Classes & Constructors](#classes--constructors)
+  1. [Modules](#modules)
+  1. [Iterators and Generators](#iterators-and-generators)
+  1. [Properties](#properties)
+  1. [Variables](#variables)
+  1. [Hoisting](#hoisting)
+  1. [Comparison Operators & Equality](#comparison-operators--equality)
+  1. [Blocks](#blocks)
+  1. [Control Statements](#control-statements)
+  1. [Comments](#comments)
+  1. [Whitespace](#whitespace)
+  1. [Commas](#commas)
+  1. [Semicolons](#semicolons)
+  1. [Type Casting & Coercion](#type-casting--coercion)
+  1. [Naming Conventions](#naming-conventions)
+  1. [Accessors](#accessors)
+  1. [Events](#events)
+
 ## Promises
 
-  - Always chain standard promises
+  <a name="promises--standard"></a><a name="1.1"></a>
+  - [1.1](#promises--standard) Always chain standard promises
 
     > Why? Nested Promises are hideous
 
@@ -71,9 +101,83 @@ Latitude JS Style Guide
 
     ```
 
+  - Never async functions we don't invoke manually
+
+    > Why? Because it's too easy for errors to slip through the cracks
+
+    ```javascript
+
+
+    // bad
+    async componentDidMount(){
+
+        const isConnected = await connected();
+        if(!isConnected) return;
+
+        const data = await getData();
+        if(!data) return;
+
+        processThe(data);
+    }
+
+    // better, but not great (and kind of ugly)
+    async componentDidMount(){
+
+        let isConnected = false;
+        try {
+            isConnected = await connected();
+        }
+        catch(e) {
+            console.log('connected() error', e);
+            return;
+        }
+        if(!isConnected) return;
+
+        let data = null;
+        try {
+            data = await getData();
+        }
+        catch(e) {
+            console.log('getData() error', e);
+            return;
+        }
+        if(!data) return;
+
+        processThe(data);
+    }
+
+    // good
+    async function handleData(){
+
+        const isConnected = await connected();
+        if(!isConnected) throw(new Error('no connection'));
+
+        const data = await getData();
+        if(!data) throw(new Error('no data'));
+
+        processThe(data);
+
+        return true
+    }
+
+    componentDidMount(){
+
+        handleData()
+            .then(() => {
+                console.log('got some data and handled it');
+            })
+            .catch((e) => {
+                console.log(e);
+            })
+    }
+
+
+    ```
+
 ## References
 
-  - Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](https://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](https://eslint.org/docs/rules/no-const-assign.html)
+  <a name="references--prefer-const"></a><a name="3.1"></a>
+  - [3.1](#references--prefer-const) Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](https://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](https://eslint.org/docs/rules/no-const-assign.html)
 
     > Why? This ensures that you can’t reassign your references, which can lead to bugs and difficult to comprehend code.
 
