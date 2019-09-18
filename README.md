@@ -167,6 +167,8 @@ Latitude JS Style Guide
 
     ```
 
+**[⬆ back to top](#table-of-contents)**
+
 ## References
 
   - Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](https://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](https://eslint.org/docs/rules/no-const-assign.html)
@@ -200,6 +202,8 @@ Latitude JS Style Guide
       count += 1;
     }
     ```
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Objects
 
@@ -296,6 +300,7 @@ Latitude JS Style Guide
     const { a, ...noA } = copy; // noA => { b: 2, c: 3 }
     ```
 
+**[⬆ back to top](#table-of-contents)**
 
 ## Arrays
 
@@ -363,6 +368,7 @@ Latitude JS Style Guide
     ];
     ```
 
+**[⬆ back to top](#table-of-contents)**
 
 ## Destructuring
 
@@ -391,6 +397,7 @@ Latitude JS Style Guide
     }
     ```
 
+**[⬆ back to top](#table-of-contents)**
 
 ## Strings
 
@@ -433,6 +440,9 @@ Latitude JS Style Guide
       return `How are you, ${name}?`;
     }
     ```
+
+**[⬆ back to top](#table-of-contents)**
+
 ## Functions
 
   - Use named function expressions instead of function declarations. eslint: [`func-style`](https://eslint.org/docs/rules/func-style)
@@ -576,6 +586,9 @@ Latitude JS Style Guide
       baz,
     );
     ```
+
+**[⬆ back to top](#table-of-contents)**
+
 ## Arrow Functions
 
   - When you must use an anonymous function (as when passing an inline callback), use arrow function notation. eslint: [`prefer-arrow-callback`](https://eslint.org/docs/rules/prefer-arrow-callback.html), [`arrow-spacing`](https://eslint.org/docs/rules/arrow-spacing.html)
@@ -664,6 +677,9 @@ Latitude JS Style Guide
       )
     ));
     ```
+
+**[⬆ back to top](#table-of-contents)**
+
 ## Classes & Constructors
 
   - Always use `class`. Avoid manipulating `prototype` directly.
@@ -694,6 +710,7 @@ Latitude JS Style Guide
     }
     ```
 
+**[⬆ back to top](#table-of-contents)**
 
 ## Modules
 
@@ -728,6 +745,7 @@ Latitude JS Style Guide
     } from 'path';
     ```
 
+**[⬆ back to top](#table-of-contents)**
 
 ## Variables
 
@@ -792,6 +810,7 @@ Latitude JS Style Guide
     }
     ```
 
+**[⬆ back to top](#table-of-contents)**
 
 ## Comparison Operators & Equality
 
@@ -933,6 +952,7 @@ Latitude JS Style Guide
     const baz = !c;
     ```
 
+**[⬆ back to top](#table-of-contents)**
 
 ## Blocks
 
@@ -1047,6 +1067,7 @@ Latitude JS Style Guide
     }
     ```
 
+**[⬆ back to top](#table-of-contents)**
 
 ## Control Statements
 
@@ -1116,6 +1137,7 @@ Latitude JS Style Guide
     }
     ```
 
+**[⬆ back to top](#table-of-contents)**
 
 ## Comments
 
@@ -1255,6 +1277,7 @@ Latitude JS Style Guide
     }
     ```
 
+**[⬆ back to top](#table-of-contents)**
 
 ## Whitespace
 
@@ -1643,6 +1666,7 @@ Latitude JS Style Guide
     var obj = { "foo": 42 };
     ```
 
+**[⬆ back to top](#table-of-contents)**
 
 ## Commas
 
@@ -1776,6 +1800,7 @@ Latitude JS Style Guide
     );
     ```
 
+**[⬆ back to top](#table-of-contents)**
 
 ## Type Casting & Coercion
 
@@ -1841,6 +1866,7 @@ Latitude JS Style Guide
     const hasAge = !!age;
     ```
 
+**[⬆ back to top](#table-of-contents)**
 
 ## Naming Conventions
 
@@ -2018,6 +2044,7 @@ Latitude JS Style Guide
     };
     ```
 
+**[⬆ back to top](#table-of-contents)**
 
 ## Accessors
 
@@ -2061,28 +2088,3 @@ Latitude JS Style Guide
       return false;
     }
     ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
