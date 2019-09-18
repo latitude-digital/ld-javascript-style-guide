@@ -4,7 +4,6 @@ Latitude JS Style Guide
 ## Table of Contents
 
   1. [Promises](#promises)
-  1. [Types](#types)
   1. [References](#references)
   1. [Objects](#objects)
   1. [Arrays](#arrays)
@@ -14,26 +13,20 @@ Latitude JS Style Guide
   1. [Arrow Functions](#arrow-functions)
   1. [Classes & Constructors](#classes--constructors)
   1. [Modules](#modules)
-  1. [Iterators and Generators](#iterators-and-generators)
-  1. [Properties](#properties)
   1. [Variables](#variables)
-  1. [Hoisting](#hoisting)
   1. [Comparison Operators & Equality](#comparison-operators--equality)
   1. [Blocks](#blocks)
   1. [Control Statements](#control-statements)
   1. [Comments](#comments)
   1. [Whitespace](#whitespace)
   1. [Commas](#commas)
-  1. [Semicolons](#semicolons)
   1. [Type Casting & Coercion](#type-casting--coercion)
   1. [Naming Conventions](#naming-conventions)
   1. [Accessors](#accessors)
-  1. [Events](#events)
 
 ## Promises
 
-  <a name="promises--standard"></a><a name="1.1"></a>
-  - [1.1](#promises--standard) Always chain standard promises
+  - Always chain standard promises
 
     > Why? Nested Promises are hideous
 
@@ -176,8 +169,7 @@ Latitude JS Style Guide
 
 ## References
 
-  <a name="references--prefer-const"></a><a name="3.1"></a>
-  - [3.1](#references--prefer-const) Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](https://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](https://eslint.org/docs/rules/no-const-assign.html)
+  - Use `const` for all of your references; avoid using `var`. eslint: [`prefer-const`](https://eslint.org/docs/rules/prefer-const.html), [`no-const-assign`](https://eslint.org/docs/rules/no-const-assign.html)
 
     > Why? This ensures that you can’t reassign your references, which can lead to bugs and difficult to comprehend code.
 
